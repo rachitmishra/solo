@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* soloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* soloTests.m */; };
+		01CD14E6C9AA4946A9DA8BBA /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D139EE054C8847EF96A14215 /* Rubik-Regular.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1625AB0C4734D1EA27E822CB /* libPods-solo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41434A8F9276067F942E7F56 /* libPods-solo.a */; };
-		6DD93A6C044A09B8E1745C02 /* libPods-solo-soloTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BEC51F6316E6AB638C544A /* libPods-solo-soloTests.a */; };
+		2C06F1BF965C494583E45D0F /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5629918A91944EC49898B242 /* Rubik-Bold.ttf */; };
+		49EE67569B5AFDFBC3445F2F /* libPods-solo-soloTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ABA473E2C7418C505DF256 /* libPods-solo-soloTests.a */; };
+		722D4453D5C6F53FA34DAE97 /* libPods-solo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 366771BB53085FBCA2BEF67B /* libPods-solo.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C92ADDDD265D82ED00B9D349 /* SoloMMKVModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C92ADDDC265D82ED00B9D349 /* SoloMMKVModule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +39,19 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = solo/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = solo/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = solo/main.m; sourceTree = "<group>"; };
-		41434A8F9276067F942E7F56 /* libPods-solo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-solo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		366771BB53085FBCA2BEF67B /* libPods-solo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-solo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38124DD2BC3A3674F319B5DF /* Pods-solo-soloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-solo-soloTests.release.xcconfig"; path = "Target Support Files/Pods-solo-soloTests/Pods-solo-soloTests.release.xcconfig"; sourceTree = "<group>"; };
+		5629918A91944EC49898B242 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Bold.ttf"; path = "../react/assets/fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		6C7E40619224B5FBF448A458 /* Pods-solo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-solo.debug.xcconfig"; path = "Target Support Files/Pods-solo/Pods-solo.debug.xcconfig"; sourceTree = "<group>"; };
+		74A89DA8DBCD32EE19A50F3F /* Pods-solo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-solo.release.xcconfig"; path = "Target Support Files/Pods-solo/Pods-solo.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = solo/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		94224FD0F7F237EDE6E681ED /* Pods-solo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-solo.debug.xcconfig"; path = "Target Support Files/Pods-solo/Pods-solo.debug.xcconfig"; sourceTree = "<group>"; };
-		A0BEC51F6316E6AB638C544A /* libPods-solo-soloTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-solo-soloTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC37DDA5CA195392CE0FDDAA /* Pods-solo-soloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-solo-soloTests.debug.xcconfig"; path = "Target Support Files/Pods-solo-soloTests/Pods-solo-soloTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E62F2B9638A01F9BCFE66925 /* Pods-solo-soloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-solo-soloTests.release.xcconfig"; path = "Target Support Files/Pods-solo-soloTests/Pods-solo-soloTests.release.xcconfig"; sourceTree = "<group>"; };
+		A6ABA473E2C7418C505DF256 /* libPods-solo-soloTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-solo-soloTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92ADDDC265D82ED00B9D349 /* SoloMMKVModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoloMMKVModule.m; sourceTree = "<group>"; };
+		C92ADDE42663DA6600B9D349 /* solo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "solo-Bridging-Header.h"; sourceTree = "<group>"; };
+		C991A5FE265D664000FDAC71 /* SoloMMKVModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoloMMKVModule.h; sourceTree = "<group>"; };
+		D139EE054C8847EF96A14215 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Regular.ttf"; path = "../react/assets/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		DAB1F79872A3C6E0EFE2E979 /* Pods-solo-soloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-solo-soloTests.debug.xcconfig"; path = "Target Support Files/Pods-solo-soloTests/Pods-solo-soloTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F871165FD3D83CF736809DF2 /* Pods-solo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-solo.release.xcconfig"; path = "Target Support Files/Pods-solo/Pods-solo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DD93A6C044A09B8E1745C02 /* libPods-solo-soloTests.a in Frameworks */,
+				49EE67569B5AFDFBC3445F2F /* libPods-solo-soloTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1625AB0C4734D1EA27E822CB /* libPods-solo.a in Frameworks */,
+				722D4453D5C6F53FA34DAE97 /* libPods-solo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +94,8 @@
 		13B07FAE1A68108700A75B9A /* solo */ = {
 			isa = PBXGroup;
 			children = (
+				C991A5B7265D05FB00FDAC71 /* mmkv */,
+				C92ADDE42663DA6600B9D349 /* solo-Bridging-Header.h */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -100,10 +110,19 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				41434A8F9276067F942E7F56 /* libPods-solo.a */,
-				A0BEC51F6316E6AB638C544A /* libPods-solo-soloTests.a */,
+				366771BB53085FBCA2BEF67B /* libPods-solo.a */,
+				A6ABA473E2C7418C505DF256 /* libPods-solo-soloTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78EAE0A62618406FB96925A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5629918A91944EC49898B242 /* Rubik-Bold.ttf */,
+				D139EE054C8847EF96A14215 /* Rubik-Regular.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -122,6 +141,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D6831EF03CA293BC831B4AFF /* Pods */,
+				78EAE0A62618406FB96925A0 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -137,15 +157,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C991A5B7265D05FB00FDAC71 /* mmkv */ = {
+			isa = PBXGroup;
+			children = (
+				C991A5FE265D664000FDAC71 /* SoloMMKVModule.h */,
+				C92ADDDC265D82ED00B9D349 /* SoloMMKVModule.m */,
+			);
+			path = mmkv;
+			sourceTree = "<group>";
+		};
 		D6831EF03CA293BC831B4AFF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				94224FD0F7F237EDE6E681ED /* Pods-solo.debug.xcconfig */,
-				F871165FD3D83CF736809DF2 /* Pods-solo.release.xcconfig */,
-				DC37DDA5CA195392CE0FDDAA /* Pods-solo-soloTests.debug.xcconfig */,
-				E62F2B9638A01F9BCFE66925 /* Pods-solo-soloTests.release.xcconfig */,
+				6C7E40619224B5FBF448A458 /* Pods-solo.debug.xcconfig */,
+				74A89DA8DBCD32EE19A50F3F /* Pods-solo.release.xcconfig */,
+				DAB1F79872A3C6E0EFE2E979 /* Pods-solo-soloTests.debug.xcconfig */,
+				38124DD2BC3A3674F319B5DF /* Pods-solo-soloTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -156,12 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "soloTests" */;
 			buildPhases = (
-				90E057662B30514F8D84C31F /* [CP] Check Pods Manifest.lock */,
+				7080AADD271C199A9A04D8D1 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				1F36FC0A6960AF860F6097D6 /* [CP] Embed Pods Frameworks */,
-				DFC43BA4AE99BF01E96C1565 /* [CP] Copy Pods Resources */,
+				79A3201F509F4CAA227474B1 /* [CP] Embed Pods Frameworks */,
+				9F1C9892FFF14371996ED215 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,14 +205,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "solo" */;
 			buildPhases = (
-				001553A0826076CB5ACB3D88 /* [CP] Check Pods Manifest.lock */,
+				B0C93D5363F46AD306433A64 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				CFA08DCD46FA840A529B7A3D /* [CP] Embed Pods Frameworks */,
-				C3410B09E446994BD7FF6149 /* [CP] Copy Pods Resources */,
+				88ADC3C95043C7A6CF27A1ED /* [CP] Embed Pods Frameworks */,
+				6480952ADBC572399E250352 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,14 +229,14 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -245,34 +273,14 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				2C06F1BF965C494583E45D0F /* Rubik-Bold.ttf in Resources */,
+				01CD14E6C9AA4946A9DA8BBA /* Rubik-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		001553A0826076CB5ACB3D88 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-solo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,24 +295,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		1F36FC0A6960AF860F6097D6 /* [CP] Embed Pods Frameworks */ = {
+		6480952ADBC572399E250352 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-solo-soloTests/Pods-solo-soloTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-solo/Pods-solo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-solo-soloTests/Pods-solo-soloTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-solo/Pods-solo-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-solo-soloTests/Pods-solo-soloTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-solo/Pods-solo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		90E057662B30514F8D84C31F /* [CP] Check Pods Manifest.lock */ = {
+		7080AADD271C199A9A04D8D1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,24 +334,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C3410B09E446994BD7FF6149 /* [CP] Copy Pods Resources */ = {
+		79A3201F509F4CAA227474B1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-solo/Pods-solo-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-solo-soloTests/Pods-solo-soloTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-solo/Pods-solo-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-solo-soloTests/Pods-solo-soloTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-solo/Pods-solo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-solo-soloTests/Pods-solo-soloTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CFA08DCD46FA840A529B7A3D /* [CP] Embed Pods Frameworks */ = {
+		88ADC3C95043C7A6CF27A1ED /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,7 +368,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-solo/Pods-solo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DFC43BA4AE99BF01E96C1565 /* [CP] Copy Pods Resources */ = {
+		9F1C9892FFF14371996ED215 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -375,6 +383,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-solo-soloTests/Pods-solo-soloTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0C93D5363F46AD306433A64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-solo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -411,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92ADDDD265D82ED00B9D349 /* SoloMMKVModule.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -429,7 +460,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC37DDA5CA195392CE0FDDAA /* Pods-solo-soloTests.debug.xcconfig */;
+			baseConfigurationReference = DAB1F79872A3C6E0EFE2E979 /* Pods-solo-soloTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -437,7 +468,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = soloTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,12 +487,12 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E62F2B9638A01F9BCFE66925 /* Pods-solo-soloTests.release.xcconfig */;
+			baseConfigurationReference = 38124DD2BC3A3674F319B5DF /* Pods-solo-soloTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = soloTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,11 +511,12 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94224FD0F7F237EDE6E681ED /* Pods-solo.debug.xcconfig */;
+			baseConfigurationReference = 6C7E40619224B5FBF448A458 /* Pods-solo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9VJ34677M5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = solo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,8 +528,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachitmishra.solo;
 				PRODUCT_NAME = solo;
+				SWIFT_OBJC_BRIDGING_HEADER = "soloMMKV/solo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -506,11 +539,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F871165FD3D83CF736809DF2 /* Pods-solo.release.xcconfig */;
+			baseConfigurationReference = 74A89DA8DBCD32EE19A50F3F /* Pods-solo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9VJ34677M5;
 				INFOPLIST_FILE = solo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -521,8 +555,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachitmishra.solo;
 				PRODUCT_NAME = solo;
+				SWIFT_OBJC_BRIDGING_HEADER = "soloMMKV/solo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -577,7 +612,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -635,7 +670,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",

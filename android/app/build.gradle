@@ -130,7 +130,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.solo"
+        applicationId "com.rachitmishra.solo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -201,6 +201,8 @@ dependencies {
     debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.flipper'
     }
+
+    implementation 'com.tencent:mmkv-static:1.2.9'
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
