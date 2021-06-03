@@ -43,6 +43,6 @@ export const tags: Tag[] = [
   },
 ];
 
-export const tagsIndex: string[] = tags.map(tag => {
+export const tagIndices: string[] = tags.map(tag => {
   return tag.key;
 });

@@ -39,15 +39,14 @@ export const getSubscription = (key: string): Subscription => {
   return JSON.parse(soloMMKV.getString(key));
 };
 
+const allowedChars =
+  '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(' ');
 const buildKey = (key: string) => {
   return key
     .split('')
-    .filter(lttr =>
-      'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        .split('')
-        .includes(lttr),
-    )
-    .join('');
+    .filter(lttr => allowedChars.includes(lttr))
+    .join('')
+    .toLowerCase();
 };
 
 export const setSubscription = (subscription: Subscription) => {

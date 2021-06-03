@@ -22,6 +22,12 @@ const styles = StyleSheet.create({
     width: 44,
     height: 32,
   },
+  shadow: {
+    shadowColor: '#333',
+    shadowOffset: {width: 0, height: 1},
+    shadowOpacity: 0.5,
+    shadowRadius: 1,
+  },
 });
 
 export default SoloButtonClose;

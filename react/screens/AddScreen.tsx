@@ -1,6 +1,6 @@
 import SoloButton from 'components/SoloButton';
 import SoloSelectableButtonGroup from 'components/SoloSelectableButtonGroup';
-import {durations, durationsIndex} from 'data/Duration';
+import {durations} from 'data/Duration';
 import {Subscription} from 'data/Subscription';
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -25,9 +25,7 @@ const AddScreen = ({route, navigation}: AddScreenProps) => {
   );
 
   const _getSelectedDurationIds = (): number[] => {
-    return _subscription.duration
-      ? [durationsIndex.indexOf(_subscription.duration)]
-      : [];
+    return _subscription.duration ? [getDurationIndices('year')] : [];
   };
 
   const _onNameChange = (name: string) => {

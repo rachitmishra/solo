@@ -5,6 +5,7 @@ import Footer from './ListFooter';
 import Header from './ListHeader';
 import ListItem from './ListItem';
 import {Subscription} from 'data/Subscription';
+import {durationIndices} from 'data/Duration';
 
 type ListProps = {
   navigation: any;
@@ -34,15 +35,11 @@ const getSpendPerMonth = (subscription: Subscription): number => {
   if (!subscription) {
     return 0;
   }
-  if (subscription.duration === 'year') {
-    return subscription.value / 12;
-  } else if (subscription.duration === 'quarter') {
-    return subscription.value / 3;
-  } else if (subscription.duration === 'halfyear') {
-    return subscription.value / 6;
-  } else {
-    return subscription.value;
-  }
+
+  return (
+    subscription.value /
+    (durationIndices.get(subscription.duration)?.value ?? 1)
+  );
 };
 
 const List = ({navigation, subscriptions}: ListProps) => {
