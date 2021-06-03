@@ -61,7 +61,7 @@ const SoloSelectableButtonGroup = ({
 
   return (
     <View>
-      <SoloTextLabel label={label} />
+      <SoloTextLabel style={styles.label} label={label} />
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={styles.selectableRow}>{_renderSelectables()}</View>
       </ScrollView>
@@ -72,13 +72,15 @@ const SoloSelectableButtonGroup = ({
 const styles = StyleSheet.create({
   label: {
     fontSize: 14,
-    marginTop: 8,
+    marginStart: 16,
+    marginTop: 0,
   },
   selectableRow: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    marginTop: 8,
+    marginTop: 4,
     marginBottom: 4,
+    marginStart: 16,
   },
 });
 

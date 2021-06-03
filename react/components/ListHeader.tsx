@@ -36,8 +36,9 @@ const Header = ({navigation, spends}: HeaderProps) => {
 
   return (
     <View>
-      <View style={styles.container}>
+      <View style={styles.headlineContainer}>
         <SoloTextHeadline headline={`👋 ${getName() ?? 'Hello'},`} />
+        <View style={styles.spacer} />
         <SoloButtonSetting navigation={navigation} />
       </View>
       <View style={styles.paragraph}>
@@ -59,11 +60,12 @@ const Header = ({navigation, spends}: HeaderProps) => {
   );
 };
 const styles = StyleSheet.create({
-  container: {
+  headlineContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginStart: 16,
+    marginHorizontal: 16,
+    marginTop: 8,
   },
   paragraph: {
     flex: 1,
@@ -75,6 +77,7 @@ const styles = StyleSheet.create({
     includeFontPadding: true,
     lineHeight: 32,
   },
+  spacer: {flex: 1},
   text: {
     fontSize: 20,
   },

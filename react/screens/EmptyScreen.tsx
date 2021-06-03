@@ -1,4 +1,4 @@
-import SoloButton from 'components/SoloButton';
+import SoloButtonAddSubscription from 'components/SoloButtonAddSubscription';
 import SoloButtonSetting from 'components/SoloButtonSetting';
 import SoloTextHeadline from 'components/SoloTextHeadline';
 import React from 'react';
@@ -18,10 +18,7 @@ const EmptyScreen = ({navigation}: EmptyScreenProps) => {
       <View style={styles.container}>
         <View>
           <SoloTextHeadline headline={'👋 Hello,'} style={styles.greet} />
-          <SoloButton
-            onPress={() => navigation.navigate('add')}
-            label={'+ Add Subscription'}
-          />
+          <SoloButtonAddSubscription navigation={navigation} />
         </View>
       </View>
     </View>
@@ -43,7 +40,8 @@ const styles = StyleSheet.create({
   settings: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 8,
+    marginTop: 12,
+    paddingEnd: 16,
   },
   greet: {
     textAlign: 'center',

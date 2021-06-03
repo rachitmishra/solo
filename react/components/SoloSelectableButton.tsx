@@ -1,7 +1,8 @@
 import React from 'react';
-import {StyleSheet, TouchableOpacity} from 'react-native';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {colors, useDarkMode} from '../utils/SoloColors';
 import SoloText from './SoloText';
+import {NeomorphFlex} from 'react-native-neomorph-shadows';
 
 type SoloSelectableButtonProps = {
   onPress: () => any;
@@ -15,45 +16,56 @@ const SoloSelectableButton = ({
   selected,
 }: SoloSelectableButtonProps) => {
   const isDarkMode = useDarkMode();
-  const colorStyle = {
-    color: selected
-      ? colors.of(colors.text.title, !isDarkMode) // darkmode & selected
-      : colors.of(colors.text.title, isDarkMode),
-  };
 
-  const backgroundColorStyle = {
-    backgroundColor: selected
-      ? colors.of(colors.button.selected, isDarkMode)
-      : colors.of(colors.button.primary, isDarkMode),
+  const _color = selected
+    ? colors.of(colors.text.buttonSelected, isDarkMode) // darkmode & selected
+    : colors.of(colors.text.button, isDarkMode);
+
+  const colorStyle = {
+    color: _color,
   };
-  const borderColorStyle = {
-    borderColor: selected
-      ? colors.of(colors.button.selected, isDarkMode)
-      : colors.of(colors.button.primary, isDarkMode),
+  const backgroundColorStyle = {
+    backgroundColor: colors.of(colors.shadow, useDarkMode()),
   };
 
   return (
-    <TouchableOpacity
-      style={[styles.btn, backgroundColorStyle, borderColorStyle]}
-      onPress={() => onPress()}>
-      <SoloText style={[styles.txt, colorStyle]}>{label}</SoloText>
-    </TouchableOpacity>
+    <View style={styles.container}>
+      <NeomorphFlex style={{...styles.selectable, ...backgroundColorStyle}}>
+        <TouchableOpacity style={[styles.btn]} onPress={() => onPress()}>
+          <SoloText style={[styles.txt, colorStyle]}>{label}</SoloText>
+        </TouchableOpacity>
+      </NeomorphFlex>
+      <SoloText style={[styles.selected, colorStyle]}>
+        {' '}
+        {selected ? '•' : ''}
+      </SoloText>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  btn: {
-    borderRadius: 4,
+  container: {
     marginEnd: 8,
-    marginTop: 4,
-    marginBottom: 4,
-    borderWidth: 1,
-    padding: 4,
-    paddingHorizontal: 6,
+    height: 56,
+    marginTop: 12,
+  },
+  btn: {
+    padding: 8,
+    paddingHorizontal: 12,
   },
   txt: {
     textTransform: 'uppercase',
     fontSize: 15,
+    textAlign: 'center',
+  },
+  selectable: {
+    shadowRadius: 10,
+    borderRadius: 20,
+  },
+  selected: {
+    height: 12,
+    textAlign: 'center',
+    fontSize: 16,
   },
 });
 

@@ -1,6 +1,6 @@
 import SoloButton from 'components/SoloButton';
 import SoloSelectableButtonGroup from 'components/SoloSelectableButtonGroup';
-import {durations} from 'data/Duration';
+import {durationKeys, durations} from 'data/Duration';
 import {Subscription} from 'data/Subscription';
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -11,6 +11,8 @@ import {deleteSubscription, setSubscription} from 'data/Store';
 import SoloTextTitle from 'components/SoloTextTitle';
 import SoloTextInput from 'components/SoloTextInput';
 import SoloButtonClose from 'components/SoloButtonClose';
+import SoloButtonNeomorph from 'components/SoloButtonNeomorph';
+import Center from 'components/Center';
 
 type AddScreenProps = {
   route: any;
@@ -24,8 +26,9 @@ const AddScreen = ({route, navigation}: AddScreenProps) => {
     subscription ? subscription : {},
   );
 
-  const _getSelectedDurationIds = (): number[] => {
-    return _subscription.duration ? [getDurationIndices('year')] : [];
+  const _getSelectedDuration = (): number[] => {
+    const _duration = durationKeys.get(_subscription.duration) ?? -1;
+    return _duration !== -1 ? [_duration] : [];
   };
 
   const _onNameChange = (name: string) => {
@@ -47,7 +50,7 @@ const AddScreen = ({route, navigation}: AddScreenProps) => {
           deleteSubscription(_subscription);
           navigation.navigate('home', {reload: true});
         }}
-        label={'Delete'}
+        label={'Delete Subscription'}
         style={styles.btnDelete}
         textColor={colors.negative}
       />
@@ -58,40 +61,47 @@ const AddScreen = ({route, navigation}: AddScreenProps) => {
   const FormContent = () => {
     return (
       <View>
-        <SoloTextTitle title="Add subscription" />
-        <SoloTextInput
-          hint="Netflix"
-          label={'Name'}
-          txt={_subscription.key ?? ''}
-          onChange={(txt: string) => _onNameChange(txt)}
-        />
-        <SoloTextInput
-          hint="₹500"
-          label={'Price (₹)'}
-          type="number-pad"
-          txt={_subscription?.value ? _subscription?.value + '' : ''}
-          onChange={(txt: string) => _onAmountChange(txt)}
-        />
-        <SoloSelectableButtonGroup
-          label={'Duration'}
-          items={durations}
-          onPressed={durationKey => {
-            const newSubscription = _subscription;
-            newSubscription.duration = durationKey[0];
-            _setSubscription(newSubscription);
-          }}
-          selectedIds={_getSelectedDurationIds()}
-          singleSelection={true}
-        />
-        <SoloButton
-          onPress={() => {
-            setSubscription(_subscription);
-            navigation.navigate('home', {reload: true});
-          }}
-          label={'Save'}
-          style={styles.btnSave}
-        />
-        {_renderDeleteButton()}
+        <View style={styles.formContainer}>
+          <SoloTextTitle title="Add subscription" />
+          <SoloTextInput
+            hint="Netflix"
+            label={'Name'}
+            txt={_subscription.key ?? ''}
+            onChange={(txt: string) => _onNameChange(txt)}
+          />
+          <SoloTextInput
+            hint="₹500"
+            label={'Price (₹)'}
+            type="number-pad"
+            txt={_subscription?.value ? _subscription?.value + '' : ''}
+            onChange={(txt: string) => _onAmountChange(txt)}
+          />
+        </View>
+        <View>
+          <SoloSelectableButtonGroup
+            label={'Duration'}
+            items={durations}
+            onPressed={durationKey => {
+              const newSubscription = _subscription;
+              newSubscription.duration = durationKey[0];
+              _setSubscription(newSubscription);
+            }}
+            selectedIds={_getSelectedDuration()}
+            singleSelection={true}
+          />
+          <Center style={styles.btnSave}>
+            <SoloButtonNeomorph>
+              <SoloButton
+                onPress={() => {
+                  setSubscription(_subscription);
+                  navigation.navigate('home', {reload: true});
+                }}
+                label={'Save'}
+              />
+            </SoloButtonNeomorph>
+          </Center>
+          {_renderDeleteButton()}
+        </View>
       </View>
     );
   };
@@ -99,7 +109,9 @@ const AddScreen = ({route, navigation}: AddScreenProps) => {
   return (
     <Container>
       <View style={styles.container}>
-        <SoloButtonClose navigation={navigation} />
+        <View style={styles.btnClose}>
+          <SoloButtonClose navigation={navigation} />
+        </View>
         <KeyboardAwareScrollView>
           <FormContent />
         </KeyboardAwareScrollView>
@@ -110,20 +122,23 @@ const AddScreen = ({route, navigation}: AddScreenProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 16,
     height: '100%',
   },
+  formContainer: {
+    margin: 16,
+  },
   btnClose: {
-    width: 44,
-    height: 32,
-    color: 'white',
+    marginStart: 12,
+    marginTop: 16,
   },
   btnSave: {
-    marginTop: 32,
+    marginTop: 24,
+    marginBottom: 36,
   },
   btnDelete: {
     backgroundColor: 'transparent',
     borderColor: 'transparent',
+    marginTop: -16,
   },
 });
 

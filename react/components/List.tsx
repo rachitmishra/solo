@@ -5,7 +5,7 @@ import Footer from './ListFooter';
 import Header from './ListHeader';
 import ListItem from './ListItem';
 import {Subscription} from 'data/Subscription';
-import {durationIndices} from 'data/Duration';
+import {getDurationByKey} from 'data/Duration';
 
 type ListProps = {
   navigation: any;
@@ -36,10 +36,8 @@ const getSpendPerMonth = (subscription: Subscription): number => {
     return 0;
   }
 
-  return (
-    subscription.value /
-    (durationIndices.get(subscription.duration)?.value ?? 1)
-  );
+  const duration = getDurationByKey(subscription.duration);
+  return subscription.value / (duration ? duration.value : 1);
 };
 
 const List = ({navigation, subscriptions}: ListProps) => {

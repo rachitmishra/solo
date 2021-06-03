@@ -21,6 +21,10 @@ export const colors = {
     light: '#eee',
     dark: '#222',
   },
+  shadow: {
+    light: '#eee',
+    dark: '#222',
+  },
   negative: {
     light: 'crimson',
     dark: 'crimson',
@@ -54,6 +58,10 @@ export const colors = {
       light: '#888',
       dark: '#666',
     },
+    buttonSelected: {
+      dark: 'yellow',
+      light: 'green',
+    },
   },
   separator: {
     light: '#cdc',
@@ -66,7 +74,7 @@ export const colors = {
     },
     selected: {
       dark: 'yellow',
-      light: '#000',
+      light: 'teal',
     },
   },
   of: (color: ColorMode, mode: boolean): string => {

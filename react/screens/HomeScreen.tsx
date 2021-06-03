@@ -1,5 +1,5 @@
 import {useFocusEffect} from '@react-navigation/native';
-import SoloButton from 'components/SoloButton';
+import SoloButtonAddSubscription from 'components/SoloButtonAddSubscription';
 import {getSubscriptions} from 'data/Store';
 import {Subscription} from 'data/Subscription';
 import React, {useState} from 'react';
@@ -39,10 +39,7 @@ const HomeScreen = ({navigation}: HomeScreenProps) => {
           <View style={styles.container}>
             <List navigation={navigation} subscriptions={_subscriptions} />
             <View style={styles.btnAdd}>
-              <SoloButton
-                onPress={() => navigation.navigate('add')}
-                label={'+ Add Subscription'}
-              />
+              <SoloButtonAddSubscription navigation={navigation} />
             </View>
           </View>
         )}

@@ -40,7 +40,7 @@ export const getSubscription = (key: string): Subscription => {
 };
 
 const allowedChars =
-  '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(' ');
+  '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const buildKey = (key: string) => {
   return key
     .split('')

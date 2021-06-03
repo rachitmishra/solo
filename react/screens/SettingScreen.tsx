@@ -10,6 +10,8 @@ import SoloTextLabel from 'components/SoloTextLabel';
 import SoloTextSubTitle from 'components/SoloTextSubTitle';
 import SoloTextInput from 'components/SoloTextInput';
 import ListSeparator from 'components/ListSeparator';
+import SoloButtonNeomorph from 'components/SoloButtonNeomorph';
+import Center from 'components/Center';
 
 type SettingScreenProps = {
   navigation: any;
@@ -80,18 +82,18 @@ const AddNewScreen = ({navigation}: SettingScreenProps) => {
           <View />
           <View>
             <SoloTextLabel label={'v0.1'} style={styles.version} />
-            <SoloButton
-              onPress={() => {
-                _showClearAllWarning();
-              }}
-              style={styles.btnClear}
-              label={'Clear All'}
-              shadow={false}
-              textColor={{
-                dark: colors.text.title.dark,
-                light: colors.text.title.dark,
-              }}
-            />
+            <Center>
+              <SoloButtonNeomorph buttonWidth={300}>
+                <SoloButton
+                  onPress={() => {
+                    _showClearAllWarning();
+                  }}
+                  style={styles.btnClear}
+                  label={'Clear All'}
+                  textColor={colors.negative}
+                />
+              </SoloButtonNeomorph>
+            </Center>
           </View>
         </View>
       </View>
@@ -118,9 +120,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   btnClear: {
-    backgroundColor: colors.negative.dark,
     marginBottom: 16,
-    borderColor: colors.negative.dark,
   },
 });
 

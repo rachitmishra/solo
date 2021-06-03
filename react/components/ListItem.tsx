@@ -1,4 +1,4 @@
-import {durationIndices, getDurationIndices} from 'data/Duration';
+import {getDurationByKey} from 'data/Duration';
 import {Subscription} from 'data/Subscription';
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
@@ -24,7 +24,7 @@ const ListItem = ({item}: ListItemProps) => {
             item.value ? item.value : 0
           }`}</SoloText>
           <SoloText style={[styles.itemDuration, labelColorStyle]}>{`${
-            durationIndices.get(item.duration)?.readable ?? ''
+            getDurationByKey(item.duration)?.readable ?? ''
           }`}</SoloText>
         </View>
       </View>

@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import SoloButton from './SoloButton';
+import SoloButtonNeomorph from './SoloButtonNeomorph';
 
 type SoloButtonSettingProps = {
   navigation: any;
@@ -8,18 +9,19 @@ type SoloButtonSettingProps = {
 
 const SoloButtonSetting = ({navigation}: SoloButtonSettingProps) => {
   return (
-    <SoloButton
-      onPress={() => navigation.navigate('settings')}
-      style={styles.btn}
-      label={'Settings'}
-    />
+    <SoloButtonNeomorph buttonWidth={120}>
+      <SoloButton
+        onPress={() => navigation.navigate('settings')}
+        style={styles.btn}
+        label={'Settings'}
+      />
+    </SoloButtonNeomorph>
   );
 };
 
 const styles = StyleSheet.create({
   btn: {
     paddingHorizontal: 16,
-    marginEnd: 16,
   },
 });
 

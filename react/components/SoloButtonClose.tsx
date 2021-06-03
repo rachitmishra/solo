@@ -2,31 +2,30 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import SoloButton from './SoloButton';
 import {colors} from '../utils/SoloColors';
+import SoloButtonNeomorph from './SoloButtonNeomorph';
 
 type SoloButtonCloseProps = {
   navigation: any;
 };
 const SoloButtonClose = ({navigation}: SoloButtonCloseProps) => {
   return (
-    <SoloButton
-      onPress={() => navigation.navigate('home')}
-      style={styles.btn}
-      label={'x'}
-      textColor={colors.text.button}
-    />
+    <SoloButtonNeomorph buttonWidth={44}>
+      <SoloButton
+        onPress={() => navigation.navigate('home')}
+        style={styles.btn}
+        label={'×'}
+        textSize={20}
+        textColor={colors.text.button}
+      />
+    </SoloButtonNeomorph>
   );
 };
 
 const styles = StyleSheet.create({
   btn: {
     width: 44,
-    height: 32,
-  },
-  shadow: {
-    shadowColor: '#333',
-    shadowOffset: {width: 0, height: 1},
-    shadowOpacity: 0.5,
-    shadowRadius: 1,
+    height: 44,
+    justifyContent: 'center',
   },
 });
 
