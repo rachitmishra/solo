@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
   itemValue: {
     paddingHorizontal: 8,
     fontSize: 20,
+    textAlign: 'right',
   },
   itemDuration: {
     paddingHorizontal: 8,
